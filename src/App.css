@@ -1,0 +1,63 @@
+.inputDiv{
+    display: flex;
+    justify-content:left;
+}
+#nameid{
+    flex-basis: 15%;
+}
+#phoneid{
+    flex-basis: 15%;
+}
+
+#nameid,#phoneid{
+    padding: 5px;
+    color:rgb(228, 30, 30);
+    border-radius: 15px;
+    justify-content: baseline;
+    margin: 15px;
+    background-color: rgb(133, 183, 224);
+    text-align: center;
+}
+.button1{
+    margin: 15px 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    background-color: rgb(176, 224, 127);
+    color: white;
+    border-style: none;
+    
+    
+    
+}
+.button1:hover{
+    margin: 15px 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    background-color: rgb(233, 176, 176);
+    color: rgb(24, 22, 22);
+    border-style: none;
+}
+.displayNaPh{
+    justify-content: space-between;
+    display: flex;
+}
+.addName{
+    color: rgb(141, 135, 135);
+    margin-left: 15px;
+    flex-basis: 20%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+.addPhone{
+    color: rgb(143, 136, 136);
+    margin-left: 15px;
+    flex-basis: 80%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}

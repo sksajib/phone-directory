@@ -1,5 +1,6 @@
 import React,{Component, useState}from "react";
 import Header from "./Header";
+import "./App.css";
 class App extends Component{
   render(){
     return(
@@ -16,7 +17,7 @@ class App3 extends Component{
   return(
  <div>
 <label htmlFor="username"> Username: </label> <br/>
-<input id="username" type="text"/><br/>
+<input id="username" type="text"/>
 <label htmlFor="password">Password: </label><br/>
 <input id="password" type="password"/><br/>
 </div>
@@ -36,14 +37,18 @@ function App1() {
   return (
     <div> 
       <Header/> 
-      <input type="text" placeholder="Type your Name" value={name} onChange={handleName} id='nameid'/><br/>
+      <div className="inputDiv">
+      <input type="text" placeholder="Type your Name" value={name} onChange={handleName} id='nameid'/>
       <input type="text" placeholder="Type your Number" value={phone} onChange={handlePhone} id='phoneid'/><br/>
-      <button>Add</button>
+      </div>
+      <button className="button1">Add</button>
     <div>
-      <span >Name: {name}</span>
+      <span className="nameLabel">Name: {name}</span>
       <br/>
-      <span>Phone: {phone}</span>
-      
+      <span className="phoneLabel">Phone: {phone}</span>
+      <div className="displayNaPh"><p className="addName">NAME</p>
+           <p className="addPhone">PHONE</p>
+      </div>
     </div>
     
   
