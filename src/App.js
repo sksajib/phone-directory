@@ -39,8 +39,16 @@ function App1() {
       id:1,
       aname:"SAJIB",
       aphone:7439851918
+    },
+    {
+      id:2,
+      aname:"PURBA",
+      aphone:8337052095
     }
   ]
+  const buttonclick=(sub=>{
+
+  })
   return (
     <div> 
       <Header/> 
@@ -60,13 +68,14 @@ function App1() {
       <div className="displayNaPh">
         <p className="addName">SAJIB</p>
       </div>
-      <div className="displayNaPh">
+      <div className="displayNaPh1">
         <p className="addName">PURBA</p>
       </div>
       {subscriber.map(sub=>(
-        <div className="displayNaPh" key={sub.id}>
-          <p className="addName">{sub.aname}</p>
-          <p className="addPhone">{sub.aphone}</p>
+        <div className="displayNaPh1" key={sub.id}>
+          <p className="addName1">{sub.aname}</p>
+          <p className="addPhone1">{sub.aphone}</p>
+          <button value="Delete" onClick={buttonclick} className="addButton">DELETE</button>
         </div>
       ))}
       
