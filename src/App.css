@@ -44,19 +44,17 @@
     border-style: none;
 }
 .displayNaPh{
-    justify-content: space-between;
-    display: flex;
+    display:flex;
+    justify-items: baseline;
 }
 .addName{
     color: rgb(141, 135, 135);
-    margin-left: 15px;
     flex-basis: 20%;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
 }
 .addPhone{
     color: rgb(143, 136, 136);
-    margin-left: 15px;
     flex-basis: 80%;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
