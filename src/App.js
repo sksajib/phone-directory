@@ -46,21 +46,21 @@ function App1() {
       aphone:8337052095
     }
   ]
-  const buttonclick=(sub=>{
-
-  })
+  const buttonclick=(msg)=>{
+    alert(msg)
+  }
   return (
     <div> 
-      <Header/> 
+      <Header head="SAJIB"/> 
       <div className="inputDiv">
       <input type="text" placeholder="Type your Name" value={name} onChange={handleName} id='nameid'/>
       <input type="text" placeholder="Type your Number" value={phone} onChange={handlePhone} id='phoneid'/><br/>
       </div>
       <button className="button1">Add</button>
     <div style={{marginLeft:15}}>
-      <span className="nameLabel">Name: {name}</span>
+     {/* { <span className="nameLabel">Name: {name}</span>
       <br/>
-      <span className="phoneLabel">Phone: {phone}</span>
+      <span className="phoneLabel">Phone: {phone}</span> */}
       <div className="displayNaPh">
         <p className="addName">NAME</p>
         <p className="addPhone">PHONE</p>
@@ -75,7 +75,7 @@ function App1() {
         <div className="displayNaPh1" key={sub.id}>
           <p className="addName1">{sub.aname}</p>
           <p className="addPhone1">{sub.aphone}</p>
-          <button value="Delete" onClick={buttonclick} className="addButton">DELETE</button>
+          <button value="Delete" onClick={()=>buttonclick("Delete "+sub.aname)} className="addButton">DELETE</button>
         </div>
       ))}
       
