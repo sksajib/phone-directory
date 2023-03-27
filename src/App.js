@@ -34,6 +34,13 @@ function App1() {
   if (isNaN(phone)){
     phone='';
   }
+  const subscriber=[
+    {
+      id:1,
+      aname:"SAJIB",
+      aphone:7439851918
+    }
+  ]
   return (
     <div> 
       <Header/> 
@@ -42,13 +49,28 @@ function App1() {
       <input type="text" placeholder="Type your Number" value={phone} onChange={handlePhone} id='phoneid'/><br/>
       </div>
       <button className="button1">Add</button>
-    <div>
+    <div style={{marginLeft:15}}>
       <span className="nameLabel">Name: {name}</span>
       <br/>
       <span className="phoneLabel">Phone: {phone}</span>
-      <div className="displayNaPh"><p className="addName">NAME</p>
-           <p className="addPhone">PHONE</p>
+      <div className="displayNaPh">
+        <p className="addName">NAME</p>
+        <p className="addPhone">PHONE</p>
       </div>
+      <div className="displayNaPh">
+        <p className="addName">SAJIB</p>
+      </div>
+      <div className="displayNaPh">
+        <p className="addName">PURBA</p>
+      </div>
+      {subscriber.map(sub=>(
+        <div className="displayNaPh" key={sub.id}>
+          <p className="addName">{sub.aname}</p>
+          <p className="addPhone">{sub.aphone}</p>
+        </div>
+      ))}
+      
+      
     </div>
     
   
