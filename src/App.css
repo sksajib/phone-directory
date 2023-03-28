@@ -42,10 +42,12 @@
     background-color: rgb(233, 176, 176);
     color: rgb(24, 22, 22);
     border-style: none;
+    cursor: pointer;
 }
 .displayNaPh{
     display:flex;
     justify-items: baseline;
+    margin-left: 15px;;
 }
 .addName{
     color: rgb(141, 135, 135);
@@ -62,6 +64,7 @@
 .displayNaPh1{
     display:flex;
     justify-items: baseline;
+    margin-left: 15px;;
 }
 .addName1{
     color: rgb(141, 135, 135);
@@ -75,11 +78,13 @@
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
 }
-.addButton{
+.deleteButton{
     background-color: rgb(212, 101, 101);
     text-align: center;
     flex-basis: 10%;
     color:black;
     border-style: none;
     height:35px;
+    cursor: pointer;
+    border-radius: 15px;
 }

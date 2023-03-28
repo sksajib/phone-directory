@@ -51,7 +51,7 @@ function App1() {
   }
   return (
     <div> 
-      <Header head="SAJIB"/> 
+      <Header head="Phone Directory Prototype"/> 
       <div className="inputDiv">
       <input type="text" placeholder="Type your Name" value={name} onChange={handleName} id='nameid'/>
       <input type="text" placeholder="Type your Number" value={phone} onChange={handlePhone} id='phoneid'/><br/>
@@ -75,10 +75,9 @@ function App1() {
         <div className="displayNaPh1" key={sub.id}>
           <p className="addName1">{sub.aname}</p>
           <p className="addPhone1">{sub.aphone}</p>
-          <button value="Delete" onClick={()=>buttonclick("Delete "+sub.aname)} className="addButton">DELETE</button>
+          <button value="Delete" onClick={()=>buttonclick("Delete "+sub.aname)} className="deleteButton">DELETE</button>
         </div>
       ))}
-      
       
     </div>
     
@@ -92,6 +91,47 @@ function App1() {
    </div>
   );
 }
+class App4 extends Component{
+  constructor(){
+    super()
+    this.state={
+      SubscriberList:[]
+    }
+  }
+   
 
-export default App1;
+  render(){
+    let   subscriber=[
+      {
+        id:1,
+        aname:"SAJIB",
+        aphone:7439851918
+      },
+      {
+        id:2,
+        aname:"PURBA",
+        aphone:8337052095
+      }
+    ]
+    return(
+    <div> 
+      <Header head="Phone Directory Prototype"/>
+      <button className="button1">Add</button>
+      <div className="displayNaPh">
+        <p className="addName">NAME</p>
+        <p className="addPhone">PHONE</p>
+      </div>
+      {this.state.SubscriberList.map (sub=>{
+        return <div className="displayNaPh1" key={sub.id}>
+          <p className="addName1">{sub.aname}</p>
+          <p className="addPhone1">{sub.aphone}</p>
+          <button value="Delete"  className="deleteButton">DELETE</button>
+        </div>
+      })}
+      
+    </div>
+    );
+  }
+}
+export default App4;
 

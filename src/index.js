@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import AddSubscriber from './AddSubscriber';
 import OrderSummary from './OrderSummary';
 import reportWebVitals from './reportWebVitals';
 
