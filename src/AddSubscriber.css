@@ -1,0 +1,62 @@
+.backButton,.addButton{
+    padding: 20px;
+    color:black;
+    background-color: rgb(161, 161, 80);
+    
+    border-radius: 15px;
+    
+    border-style: none;
+    margin-left: 15px;
+    text-align: center;
+    height:50px;
+    width:100px;
+}
+.backButton:hover,.addButton:hover{
+    background-color: rgb(204, 21, 21);
+    cursor: pointer;
+    
+    padding: 30px;
+}
+.subscriber-form{
+    
+    text-align: center;
+    justify-content: center;
+    color: black;
+}
+.label-element{
+    
+    margin: 15px 15px 15px 15px;
+    text-align: center;
+
+    color: black;
+}
+.input-element{
+    padding:15px;
+    margin-left: 15px;
+}
+.subscriber-to-be-added {
+    display: table;
+    margin-left: 15px;
+  }
+  
+  .subscriber-to-be-added span {
+    display: table-row;
+    vertical-align: middle;
+    padding:0 10px;
+    margin-top: 20px;
+    padding-right: 10px;
+  }
+  
+  
+  
+  .subscriber-heading{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left:15px;
+  }
+  .subscriber-info {
+    margin-left: 10px;
+    margin-top: 10px;
+    
+  }
+  
