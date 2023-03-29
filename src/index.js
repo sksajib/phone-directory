@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import ShowSubscribers from './ShowSubscribers';
 import AddSubscriber from './AddSubscriber';
 import OrderSummary from './OrderSummary';
+import PhoneDirectory from './PhoneDirectory';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode><App/> </React.StrictMode>);
+  <React.StrictMode><PhoneDirectory/> </React.StrictMode>);
 // ReactDOM.createRoot(document.getElementById('root1')).render(
 //   <React.StrictMode>
 //     <p> 1. Is React a JavaScript library for building user-interfaces?</p>
