@@ -30,8 +30,8 @@ class ShowSubscribers extends Component{
     subscriber['name']=sub.name
     subscriber['phone']=sub.phone
     this.setState(subscriber)
-    console.log(this.state)
     this.props.deleteSubscriberHandler(this.state); 
+
   }
   render(){
     
@@ -49,7 +49,7 @@ class ShowSubscribers extends Component{
           <p className="addName1">{sub.name}</p>
           <p className="addPhone1">{sub.phone}</p>
         
-          <button value="Delete"  className="deleteButton" onClick={this.onDeletedClick.bind(this,sub)}>{sub.id}</button>
+          <button value="Delete"  className="deleteButton" onClick={this.onDeletedClick.bind(this,sub)}>DELETE</button>
         </div>
       })}
       

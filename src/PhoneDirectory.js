@@ -41,7 +41,7 @@ class PhoneDirectory extends Component{
     
     }
     render(){
-    
+        console.log(this.state.subscribersList)
         return(
             <Router>
             
