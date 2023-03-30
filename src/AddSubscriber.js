@@ -1,6 +1,7 @@
-import React,{Component, useState} from "react";
+import React,{Component} from "react";
 import Header from "./Header"
 import "./AddSubscriber.css"
+import {Link} from "react-router-dom" 
 class AddSubscriber extends Component{
     constructor(){
         super()
@@ -14,7 +15,13 @@ class AddSubscriber extends Component{
         const state=this.state;
         state[e.target.name]=e.target.value;
         this.setState(state);
-        console.log(this.state);
+    }
+    onFormSubmitted=(e)=>{
+        e.preventDefault();
+        this.props.addSubscriberHandler(this.state)
+        this.setState({id:0,name:'',phone:''})
+        this.props.history.push("/")
+        
     }
     
     render(){
@@ -22,8 +29,8 @@ class AddSubscriber extends Component{
             <div>
                 <Header head="Add Subscriber"/>
                 <div id="container1">
-                    <button className="backButton" onClick={()=>this.handleBackButtonclick} >Back</button>
-                    <form className="subscriber-Form">
+                <Link to="/"><button className="backButton" onClick={()=>this.handleBackButtonclick} >Back</button></Link>
+                    <form className="subscriber-Form" onSubmit={this.onFormSubmitted.bind(this)}>
                         <label htmlFor="name" className="label-element">Name: </label><br/>
                         <input type="text" id="name" className="input-element" name="name"placeholder="Type Your Name"onChange={this.handleInputChange}/><br/><br/> 
                         <label htmlFor="phone" className="label-element">Phone: </label><br/>
@@ -33,7 +40,7 @@ class AddSubscriber extends Component{
                         <span className="subscriber-info">Name:{this.state.name}</span><br/>
                         <span className="subscriber-info">Phone:{this.state.phone}</span>
                     </div><br/>
-                    <button className="addButton" type="submit" onSubmit={()=>this.handleSubmit}>Add</button>
+                    <button className="addButton" type="submit" >Add</button>
                     </form>
                     
                 </div>
