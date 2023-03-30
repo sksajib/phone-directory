@@ -1,5 +1,6 @@
 import React,{Component, useState} from "react";
 import Header from "./Header"
+import { useNavigate } from "react-router-dom";
 import "./AddSubscriber.css"
 import {Link} from "react-router-dom" 
 class AddSubscriber extends Component{
@@ -21,6 +22,8 @@ class AddSubscriber extends Component{
         e.preventDefault();
         this.props.addSubscriberHandler(this.state)
         this.setState({id:0,name:'',phone:''})
+        this.props.history.push("/")
+        
     }
     
     render(){
