@@ -1,4 +1,4 @@
-import React,{Component, useState}from "react";
+import React,{Component}from "react";
 import Header from "./Header";
 import "./ShowSubscribers.css";
 import {Link} from "react-router-dom"
@@ -48,8 +48,9 @@ class ShowSubscribers extends Component{
         return<div className="displayNaPh1" key={sub.id}>
           <p className="addName1">{sub.name}</p>
           <p className="addPhone1">{sub.phone}</p>
-        
+          
           <button value="Delete"  className="deleteButton" onClick={this.onDeletedClick.bind(this,sub)}>DELETE</button>
+          
         </div>
       })}
       

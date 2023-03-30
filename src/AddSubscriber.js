@@ -1,6 +1,5 @@
-import React,{Component, useState} from "react";
+import React,{Component} from "react";
 import Header from "./Header"
-import { useNavigate } from "react-router-dom";
 import "./AddSubscriber.css"
 import {Link} from "react-router-dom" 
 class AddSubscriber extends Component{
